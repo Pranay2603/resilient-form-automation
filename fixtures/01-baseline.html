@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Baseline form</title>
+<style>body{font:15px Arial;margin:24px}label,td,.lbl{color:#222}input,select{padding:6px;margin:4px}.row{margin:8px 0}
+.hide{display:none}table td{padding:4px 12px}</style></head><body>
+<h2>Baseline form</h2>
+
+<form>
+ <div class="row"><label for="fn">First Name</label> <input id="fn" name="fname" type="text" data-expect="first-name"></div>
+ <div class="row"><label for="ln">Last Name</label> <input id="ln" name="lname" type="text"></div>
+ <div class="row">Gender
+   <input type="radio" id="g1" name="gender" value="Male" data-expect="gender-male"><label for="g1">Male</label>
+   <input type="radio" id="g2" name="gender" value="Female"><label for="g2">Female</label>
+   <input type="radio" id="g3" name="gender" value="Transgender"><label for="g3">Transgender</label></div>
+ <div class="row"><label for="em">Email</label> <input id="em" name="email" type="email"></div>
+ <div class="row"><label for="st">State</label> <select id="st" name="state" data-expect="state"><option value="">-- Select State --</option><option value="AL">Alabama</option><option value="CA">California</option><option value="FL">Florida</option><option value="KA">Karnataka</option><option value="PU">Punjab</option><option value="TE">Texas</option><option value="WA">Washington</option></select></div>
+</form>
+</body></html>

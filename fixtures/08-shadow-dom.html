@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Form inside shadow DOM</title>
+<style>body{font:15px Arial;margin:24px}label,td,.lbl{color:#222}input,select{padding:6px;margin:4px}.row{margin:8px 0}
+.hide{display:none}table td{padding:4px 12px}</style></head><body>
+<h2>Form inside shadow DOM</h2>
+
+<p>Site search: <input type="text" placeholder="Search"></p>
+<my-form></my-form>
+<script>
+customElements.define('my-form', class extends HTMLElement {
+  constructor() { super(); const r = this.attachShadow({mode:'open'});
+  r.innerHTML = `<form><div><label for="a">First Name</label> <input id="a" type="text" data-expect="first-name"></div>
+  <div>Gender <input type="radio" name="g" id="m" data-expect="gender-male"><label for="m">Male</label>
+  <input type="radio" name="g" id="f"><label for="f">Female</label></div>
+  <div><label for="s">State</label> <select id="s" data-expect="state"><option value="">-- Select State --</option><option value="AL">Alabama</option><option value="CA">California</option><option value="FL">Florida</option><option value="KA">Karnataka</option><option value="PU">Punjab</option><option value="TE">Texas</option><option value="WA">Washington</option></select></div></form>`; }
+});
+</script>
+</body></html>

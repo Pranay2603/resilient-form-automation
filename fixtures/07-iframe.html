@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Form inside an iframe</title>
+<style>body{font:15px Arial;margin:24px}label,td,.lbl{color:#222}input,select{padding:6px;margin:4px}.row{margin:8px 0}
+.hide{display:none}table td{padding:4px 12px}</style></head><body>
+<h2>Form inside an iframe</h2>
+
+<p>Site search: <input type="text" placeholder="Search"></p>
+<iframe style="width:640px;height:260px;border:1px solid #999" srcdoc="<form><div style='margin:8px'><label for='a'>First Name</label> <input id='a' type='text' data-expect='first-name'></div>
+<div style='margin:8px'>Gender <input type='radio' name='g' id='m' data-expect='gender-male'><label for='m'>Male</label>
+<input type='radio' name='g' id='fm'><label for='fm'>Female</label></div>
+<div style='margin:8px'><label for='s'>State</label> <select id='s' data-expect='state'><option value=&quot;&quot;>-- Select State --</option><option value=&quot;AL&quot;>Alabama</option><option value=&quot;CA&quot;>California</option><option value=&quot;FL&quot;>Florida</option><option value=&quot;KA&quot;>Karnataka</option><option value=&quot;PU&quot;>Punjab</option><option value=&quot;TE&quot;>Texas</option><option value=&quot;WA&quot;>Washington</option></select></div></form>"></iframe>
+</body></html>

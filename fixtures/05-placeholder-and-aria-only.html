@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>No visible labels</title>
+<style>body{font:15px Arial;margin:24px}label,td,.lbl{color:#222}input,select{padding:6px;margin:4px}.row{margin:8px 0}
+.hide{display:none}table td{padding:4px 12px}</style></head><body>
+<h2>No visible labels</h2>
+
+<form>
+ <div class="row"><input type="text" placeholder="Enter your first name" data-expect="first-name">
+ <input type="text" placeholder="Enter your last name"></div>
+ <div class="row" role="radiogroup" aria-label="Gender">
+   <input type="radio" name="p" aria-label="Female"><input type="radio" name="p" aria-label="Male" data-expect="gender-male">
+   <input type="radio" name="p" aria-label="Other"></div>
+ <div class="row"><select aria-label="State / Province" data-expect="state"><option value="">Choose...</option><option value="AL">Alabama</option><option value="CA">California</option><option value="FL">Florida</option><option value="KA">Karnataka</option><option value="PU">Punjab</option><option value="TE">Texas</option><option value="WA">Washington</option></select></div>
+</form>
+</body></html>

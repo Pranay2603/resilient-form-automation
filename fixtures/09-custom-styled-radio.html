@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Hidden native radios, styled pills</title>
+<style>body{font:15px Arial;margin:24px}label,td,.lbl{color:#222}input,select{padding:6px;margin:4px}.row{margin:8px 0}
+.hide{display:none}table td{padding:4px 12px}</style></head><body>
+<h2>Hidden native radios, styled pills</h2>
+
+<style>.pill input{position:absolute;opacity:0;width:1px;height:1px}
+.pill span{display:inline-block;padding:6px 14px;border:1px solid #888;border-radius:16px;margin:4px;cursor:pointer}
+.pill input:checked+span{background:#cde}</style>
+<form>
+ <div class="row"><label for="p">First Name</label> <input id="p" type="text" data-expect="first-name"></div>
+ <div class="row"><span class="lbl">Gender</span>
+   <label class="pill"><input type="radio" name="gg" value="Female"><span>Female</span></label>
+   <label class="pill"><input type="radio" name="gg" value="Male" data-expect="gender-male"><span>Male</span></label>
+   <label class="pill"><input type="radio" name="gg" value="Other"><span>Other</span></label></div>
+ <div class="row"><label for="q">State</label> <select id="q" data-expect="state"><option value="">-- Select State --</option><option value="AL">Alabama</option><option value="CA">California</option><option value="FL">Florida</option><option value="KA">Karnataka</option><option value="PU">Punjab</option><option value="TE">Texas</option><option value="WA">Washington</option></select></div>
+</form>
+</body></html>

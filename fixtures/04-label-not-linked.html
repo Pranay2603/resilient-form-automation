@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Layout table, labels not linked to inputs</title>
+<style>body{font:15px Arial;margin:24px}label,td,.lbl{color:#222}input,select{padding:6px;margin:4px}.row{margin:8px 0}
+.hide{display:none}table td{padding:4px 12px}</style></head><body>
+<h2>Layout table, labels not linked to inputs</h2>
+
+<form><table>
+ <tr><td>First Name</td><td><input type="text" name="a" data-expect="first-name"></td></tr>
+ <tr><td>Last Name</td><td><input type="text" name="b"></td></tr>
+ <tr><td>Gender</td><td><input type="radio" name="c" value="x1" data-expect="gender-male"> Male
+   <input type="radio" name="c" value="x2"> Female <input type="radio" name="c" value="x3"> Other</td></tr>
+ <tr><td>State</td><td><select name="d" data-expect="state"><option value="">-- Select State --</option><option value="AL">Alabama</option><option value="CA">California</option><option value="FL">Florida</option><option value="KA">Karnataka</option><option value="PU">Punjab</option><option value="TE">Texas</option><option value="WA">Washington</option></select></td></tr>
+</table></form>
+</body></html>

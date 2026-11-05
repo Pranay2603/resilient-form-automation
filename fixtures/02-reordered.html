@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Reordered fields</title>
+<style>body{font:15px Arial;margin:24px}label,td,.lbl{color:#222}input,select{padding:6px;margin:4px}.row{margin:8px 0}
+.hide{display:none}table td{padding:4px 12px}</style></head><body>
+<h2>Reordered fields</h2>
+
+<form>
+ <div class="row"><label for="s">State</label> <select id="s" data-expect="state"><option value="">-- Select State --</option><option value="AL">Alabama</option><option value="CA">California</option><option value="FL">Florida</option><option value="KA">Karnataka</option><option value="PU">Punjab</option><option value="TE">Texas</option><option value="WA">Washington</option></select></div>
+ <div class="row"><label for="e">Email</label> <input id="e" type="email"></div>
+ <div class="row"><b>Gender</b><br>
+   <input type="radio" id="f" name="sx" value="Female"><label for="f">Female</label><br>
+   <input type="radio" id="m" name="sx" value="Male" data-expect="gender-male"><label for="m">Male</label><br>
+   <input type="radio" id="o" name="sx" value="Other"><label for="o">Other</label></div>
+ <div class="row"><label for="l">Last Name</label> <input id="l" type="text"></div>
+ <div class="row"><label for="f1">First Name</label> <input id="f1" type="text" data-expect="first-name"></div>
+</form>
+</body></html>

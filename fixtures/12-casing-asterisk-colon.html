@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Different wording and decoration</title>
+<style>body{font:15px Arial;margin:24px}label,td,.lbl{color:#222}input,select{padding:6px;margin:4px}.row{margin:8px 0}
+.hide{display:none}table td{padding:4px 12px}</style></head><body>
+<h2>Different wording and decoration</h2>
+
+<form>
+ <div class="row"><span class="lbl">GIVEN NAME *:</span> <input type="text" name="n1" data-expect="first-name"></div>
+ <div class="row"><span class="lbl">Surname *:</span> <input type="text" name="n2"></div>
+ <div class="row"><span class="lbl">Sex :</span> <label><input type="radio" name="sx" value="1"> Female</label> <label><input type="radio" name="sx" value="2" data-expect="gender-male"> Male</label></div>
+ <div class="row"><span class="lbl">State / Province:</span> <select name="n3" data-expect="state"><option value="">Please choose</option><option value="AL">Alabama</option><option value="CA">California</option><option value="FL">Florida</option><option value="KA">Karnataka</option><option value="PU">Punjab</option><option value="TE">Texas</option><option value="WA">Washington</option></select></div>
+</form>
+</body></html>

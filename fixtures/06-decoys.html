@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Similar looking decoys</title>
+<style>body{font:15px Arial;margin:24px}label,td,.lbl{color:#222}input,select{padding:6px;margin:4px}.row{margin:8px 0}
+.hide{display:none}table td{padding:4px 12px}</style></head><body>
+<h2>Similar looking decoys</h2>
+
+<form>
+ <div class="row"><label for="nick">Nickname</label> <input id="nick" name="firstName" type="text"></div>
+ <div class="row"><label for="ln2">Last Name</label> <input id="ln2" name="first_name_alt" class="first-name" type="text"></div>
+ <div class="row hide"><label for="ghost">First Name</label> <input id="ghost" type="text"></div>
+ <div class="row"><label for="fn2">First Name</label> <input id="fn2" name="field2" type="text" data-expect="first-name"></div>
+ <div class="row">Pet gender
+   <input type="radio" id="pm" name="pet" value="Male"><label for="pm">Male</label>
+   <input type="radio" id="pf" name="pet" value="Female"><label for="pf">Female</label></div>
+ <div class="row">Gender
+   <input type="radio" id="am" name="adult" value="Female"><label for="am">Female</label>
+   <input type="radio" id="af" name="adult" value="Male" data-expect="gender-male"><label for="af">Male</label></div>
+ <div class="row"><label for="co">Country</label> <select id="co" name="state"><option value="">-- Select Country --</option><option>India</option><option>Texas Republic</option><option>Canada</option></select></div>
+ <div class="row"><label for="st2">State</label> <select id="st2" name="country" data-expect="state"><option value="">-- Select State --</option><option value="AL">Alabama</option><option value="CA">California</option><option value="FL">Florida</option><option value="KA">Karnataka</option><option value="PU">Punjab</option><option value="TE">Texas</option><option value="WA">Washington</option></select></div>
+</form>
+</body></html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Two inline fields per row</title>
+<style>body{font:15px Arial;margin:24px}label,td,.lbl{color:#222}input,select{padding:6px;margin:4px}.row{margin:8px 0}
+.hide{display:none}table td{padding:4px 12px}</style></head><body>
+<h2>Two inline fields per row</h2>
+
+<form>
+ <div class="row">First Name <input type="text" data-expect="first-name"> Last Name <input type="text"> Email <input type="email"></div>
+ <div class="row">Gender <input type="radio" name="a" value="M" data-expect="gender-male"> Male <input type="radio" name="a" value="F"> Female
+   &nbsp; State <select data-expect="state"><option value="">-- Select State --</option><option value="AL">Alabama</option><option value="CA">California</option><option value="FL">Florida</option><option value="KA">Karnataka</option><option value="PU">Punjab</option><option value="TE">Texas</option><option value="WA">Washington</option></select></div>
+</form>
+</body></html>
